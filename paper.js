@@ -15,8 +15,8 @@ class Paper {
    }
    display(){
     fill("pink");
-    image(this.image,0,0);
-    //ellipseMode(RADIUS);
-   // ellipse(this.body.position.x, this.body.position.y, this.radius, this.radius);
+    //image(this.image,0,0);
+    ellipseMode(RADIUS);
+    ellipse(this.body.position.x, this.body.position.y, this.radius, this.radius);
    }
 }
