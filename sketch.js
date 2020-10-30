@@ -20,11 +20,11 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-    paper = new Paper(100,300,10)
+    paper = new Paper(100,300,35)
     ground = new Ground(400,400,800,10);
-    centerdustbin = new Dustbin(550,380,100,15);
-    leftdustbin = new Dustbin(500,320,15,110);
-    rightdustbin = new Dustbin(600,320,15,110);
+    centerdustbin = new Dustbin(550,400,100,15);
+    leftdustbin = new Dustbin(500,340,15,110);
+    rightdustbin = new Dustbin(600,340,15,110);
 	Engine.run(engine);
   
 }
@@ -41,13 +41,13 @@ function draw() {
   //rightdustbin.display();
   dimg.height = 150;
   dimg.width = 100;
-  image(dimg,500,250);
+  image(dimg,500,280);
   drawSprites();
  
 }
 function keyPressed(){
   if (keyCode === UP_ARROW ){
-    Matter.Body.applyForce(paper.body, paper.body.position, {x:23,y:-12});
+    Matter.Body.applyForce(paper.body, paper.body.position, {x:195,y:-150});
     console.log("You Win!!!");
   }
 }
